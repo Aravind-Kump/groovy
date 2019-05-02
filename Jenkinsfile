@@ -7,10 +7,10 @@ node {
    stage('check for Maven'){
         sh 'mvn -version'
     stage('Test') {
-        sh 'mv /var/lib/jenkins/workspace/groovy/warfile/* /var/lib/jenkins/workspace/groovy/'
+        sh 'mv /var/lib/jenkins/workspace/pipeline/warfile/* /var/lib/jenkins/workspace/pipeline/'
         sh 'mvn clean package'     
     }
-    stage('Deploy') { 
+    /*stage('Deploy') { 
         /* sh 'docker rm -f $(docker ps -a)' */
         /* sh 'docker network create -d mynetwork --subnet=11.12.0.0/16 --ingress --opt com.docker.network.mtu=9216 --opt encrypted=true my-ingress-network' */
         sh 'docker build -t app:latest /var/lib/jenkins/workspace/CICD-JenkinsFILE/.'
@@ -20,7 +20,7 @@ node {
         /* sh 'docker exec mycontainer /usr/local/tomcat/bin/startup.sh' */
         
     stage('deploy with ansible') {
-        sh 'ansible-playbook myweb.yml'
+        sh 'ansible-playbook myweb.yml'*/
         
         }
        
