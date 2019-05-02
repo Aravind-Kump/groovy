@@ -1,6 +1,6 @@
 node {  
     stage('compile') { 
-        sh 'cd /var/lib/jenkins/workspace/groovy'
+        sh 'cd /var/lib/jenkins/workspace/pipeline'
         sh 'rm -rf *'
         sh 'git clone https://github.com/balu2750/warfile'
     }
