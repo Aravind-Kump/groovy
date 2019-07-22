@@ -2,7 +2,7 @@ node {
     stage('compile') { 
         sh 'cd /var/lib/jenkins/workspace/Groovy-Test'
         sh 'rm -rf *'
-        sh 'git clone https://github.com/Aravind-Kumpatla-SAP/groovy'
+        sh 'git clone https://github.com/balu2750/warfile.git'
     }
     stage('Deploy') { 
         /* sh 'docker rm -f $(docker ps -a)' */
